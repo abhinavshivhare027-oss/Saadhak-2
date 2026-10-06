@@ -4,215 +4,764 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>शिव भजन संग्रह</title>
+<title>शिव भजन | साधक</title>
 
 <style>
 *{box-sizing:border-box}
 
 body{
- margin:0;
- font-family:Arial,sans-serif;
- background:linear-gradient(180deg,#fff1d6,#f7d9a5);
- color:#542600;
+margin:0;
+font-family:"Noto Sans Devanagari",Arial,sans-serif;
+background:linear-gradient(180deg,#ffd978 0%,#f4c258 48%,#ffe8a8 100%);
+color:#8b1700;
 }
 
-header{
- background:#8b0000;
- color:white;
- text-align:center;
- padding:20px 10px;
- box-shadow:0 3px 10px #0004;
+/* HEADER */
+.hero{
+position:relative;
+overflow:hidden;
+text-align:center;
+padding:28px 12px 22px;
+background:radial-gradient(circle at 50% 25%,#ffb000 0,#c82a00 32%,#780000 68%,#4d0000 100%);
+border-bottom:3px solid #e7b34a;
+box-shadow:0 6px 18px #59000055;
 }
 
-header h1{
- margin:0;
- font-size:28px;
+.hero:before{
+content:"ॐ";
+position:absolute;
+left:7%;
+top:4px;
+font-size:100px;
+color:#ffd45b;
+opacity:.12;
 }
 
-.subtitle{
- margin-top:6px;
- font-size:15px;
- color:#ffe7b0;
+.hero:after{
+content:"ॐ";
+position:absolute;
+right:7%;
+top:4px;
+font-size:100px;
+color:#ffd45b;
+opacity:.12;
 }
 
-.bhajan-box{
- max-width:750px;
- margin:25px auto;
- padding:15px;
+.trident-left,
+.trident-right{
+position:absolute;
+top:16px;
+font-size:64px;
+color:#ffd35a;
+opacity:.75;
 }
 
-.card{
- display:block;
- text-decoration:none;
- background:#fff;
- color:#6b2600;
- margin:12px 0;
- padding:16px 18px;
- border-radius:15px;
- border-left:6px solid #c56a00;
- font-size:18px;
- font-weight:bold;
- box-shadow:0 4px 12px #0002;
- transition:.2s;
+.trident-left{left:23%}
+.trident-right{right:23%}
+
+.bells{
+position:absolute;
+top:0;
+left:3%;
+font-size:27px;
+opacity:.85;
+}
+.bells.r{left:auto;right:3%}
+
+.om{
+position:relative;
+z-index:2;
+font-size:53px;
+font-weight:bold;
+color:#ffd85c;
+text-shadow:0 0 12px #ffb400;
 }
 
-.card:hover{
- background:#fff0d0;
- transform:translateY(-2px);
+.hero h1{
+position:relative;
+z-index:2;
+margin:0;
+font-size:38px;
+line-height:1.15;
+color:#ffe9a7;
+font-weight:900;
+text-shadow:0 3px 3px #4d0000;
 }
 
-.icon{
- margin-right:10px;
+.hero p{
+position:relative;
+z-index:2;
+margin:4px 0 0;
+font-size:16px;
+color:#ffe2a0;
+font-weight:bold;
 }
 
+.flower{
+position:relative;
+z-index:2;
+margin-top:8px;
+font-size:19px;
+}
+
+/* LIST */
+.container{
+max-width:1100px;
+margin:auto;
+padding:12px 10px 25px;
+}
+
+/* CARD */
+.bhajan{
+position:relative;
+display:grid;
+grid-template-columns:120px 28px minmax(0,1fr) 140px;
+align-items:center;
+gap:12px;
+margin:10px 0;
+padding:13px;
+background:linear-gradient(135deg,#fff9e9,#ffedc8);
+border:2px solid #dfaa34;
+border-radius:21px;
+box-shadow:
+0 7px 16px #6d260028,
+inset 0 1px #fff;
+overflow:hidden;
+}
+
+.bhajan:before{
+content:"";
+position:absolute;
+right:-30px;
+top:-35px;
+width:150px;
+height:150px;
+border-radius:50%;
+background:#e3b54a16;
+}
+
+/* 3D ICON */
+.icon3d{
+width:105px;
+height:105px;
+margin:auto;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:55px;
+font-weight:bold;
+color:#ffd85c;
+background:radial-gradient(circle at 30% 25%,#ffd96a,#d77a00 48%,#6a2700 100%);
+border:6px solid #efc451;
+box-shadow:
+0 0 0 6px #f3cf6944,
+0 8px 15px #5c1e0045,
+inset 0 4px 7px #fff5a855,
+inset 0 -8px 12px #35000066;
+text-shadow:0 3px 4px #552000;
+position:relative;
+z-index:1;
+}
+
+/* TRISHUL DIVIDER */
+.trishul-divider{
+display:flex;
+align-items:center;
+justify-content:center;
+height:100%;
+position:relative;
+z-index:2;
+}
+
+.trishul-divider:before{
+content:"";
+position:absolute;
+top:7px;
+bottom:7px;
+width:2px;
+background:linear-gradient(
+to bottom,
+transparent,
+#d39a2c,
+#f0c85a,
+#d39a2c,
+transparent
+);
+}
+
+.trishul{
+position:relative;
+z-index:2;
+font-size:27px;
+color:#c77c00;
+background:#fff1d0;
+padding:7px 0;
+line-height:1;
+filter:drop-shadow(0 2px 2px #75400055);
+}
+
+/* TEXT */
+.info{
+min-width:0;
+position:relative;
+z-index:2;
+}
+
+.name{
+font-size:27px;
+font-weight:900;
+color:#af1f00;
+line-height:1.15;
+margin-bottom:3px;
+padding-right:28px;
+}
+
+.sub{
+font-size:15px;
+font-weight:bold;
+color:#73451f;
+margin-bottom:8px;
+}
+
+/* PLAYER */
+.player{
+display:grid;
+grid-template-columns:42px 62px minmax(45px,1fr) 23px 24px;
+align-items:center;
+gap:6px;
+background:#fffdfb;
+border-radius:26px;
+padding:5px 7px;
+box-shadow:0 3px 10px #59200020;
+width:100%;
+min-width:0;
+}
+
+.play{
+width:40px;
+height:40px;
+border:0;
+border-radius:50%;
+background:#d50800;
+color:#fff;
+font-size:17px;
+cursor:pointer;
+box-shadow:0 3px 6px #79000044;
+}
+
+.time{
+font-size:12px;
+font-weight:bold;
+white-space:nowrap;
+color:#2f2f2f;
+}
+
+.progress{
+width:100%;
+min-width:0;
+accent-color:#111;
+cursor:pointer;
+}
+
+.volume-icon{
+font-size:17px;
+line-height:1;
+text-align:center;
+}
+
+.more{
+font-size:23px;
+line-height:1;
+color:#222;
+border:0;
+background:none;
+padding:0;
+margin:0;
+cursor:pointer;
+width:24px;
+height:30px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* DOWNLOAD */
+.download{
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:50px;
+padding:10px 8px;
+border-radius:15px;
+background:linear-gradient(135deg,#e31900,#a30000);
+color:white;
+text-decoration:none;
+font-size:17px;
+font-weight:900;
+box-shadow:
+0 6px 10px #7d000050,
+inset 0 1px #ff9e91;
+position:relative;
+z-index:3;
+}
+
+/* PREMIUM HEART */
+.heart{
+position:absolute;
+right:9px;
+top:8px;
+z-index:5;
+width:34px;
+height:34px;
+border:1px solid #d9a441;
+border-radius:50%;
+background:linear-gradient(145deg,#fff9df,#f3d18a);
+color:#a90000;
+font-size:21px;
+line-height:1;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:
+0 3px 7px #6e250030,
+inset 0 1px #fff;
+}
+
+.heart.active{
+background:linear-gradient(145deg,#fff0e8,#ffc4b8);
+color:#d00000;
+}
+
+/* TABLET */
+@media(max-width:900px){
+
+.bhajan{
+grid-template-columns:88px 24px minmax(0,1fr) 105px;
+gap:8px;
+padding:11px;
+}
+
+.icon3d{
+width:78px;
+height:78px;
+font-size:40px;
+border-width:5px;
+}
+
+.trishul{
+font-size:23px;
+}
+
+.name{
+font-size:21px;
+}
+
+.sub{
+font-size:13px;
+}
+
+.download{
+font-size:14px;
+min-height:44px;
+padding:7px 4px;
+}
+}
+
+/* MOBILE */
+@media(max-width:560px){
+
+.hero{
+padding:23px 8px 18px;
+}
+
+.trident-left,
+.trident-right{
+font-size:44px;
+top:22px;
+}
+
+.trident-left{left:14%}
+.trident-right{right:14%}
+
+.om{
+font-size:45px;
+}
+
+.hero h1{
+font-size:29px;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.flower{
+font-size:16px;
+}
+
+.container{
+padding:8px 5px 18px;
+}
+
+.bhajan{
+grid-template-columns:58px 18px minmax(0,1fr) 70px;
+gap:6px;
+padding:9px;
+margin:8px 0;
+border-radius:18px;
+}
+
+.icon3d{
+width:54px;
+height:54px;
+font-size:28px;
+border-width:4px;
+box-shadow:
+0 0 0 4px #f3cf6944,
+0 5px 10px #5c1e0045,
+inset 0 3px 5px #fff5a855,
+inset 0 -5px 8px #35000066;
+}
+
+.trishul-divider:before{
+width:1px;
+top:4px;
+bottom:4px;
+}
+
+.trishul{
+font-size:20px;
+padding:6px 0;
+}
+
+.name{
+font-size:15px;
+line-height:1.2;
+padding-right:25px;
+}
+
+.sub{
+font-size:10px;
+margin-bottom:5px;
+}
+
+.player{
+grid-template-columns:34px 45px minmax(25px,1fr) 18px 20px;
+gap:3px;
+padding:4px 5px;
+}
+
+.play{
+width:32px;
+height:32px;
+font-size:13px;
+}
+
+.time{
+font-size:9px;
+}
+
+.volume-icon{
+font-size:13px;
+}
+
+.more{
+font-size:20px;
+width:20px;
+height:26px;
+}
+
+.download{
+font-size:10px;
+min-height:37px;
+border-radius:10px;
+padding:4px 2px;
+}
+
+.heart{
+width:29px;
+height:29px;
+font-size:18px;
+right:5px;
+top:4px;
+}
+}
+
+/* FOOTER */
 footer{
- margin-top:30px;
- background:#8b0000;
- color:white;
- text-align:center;
- padding:18px;
+background:#620000;
+color:#ffe5a0;
+text-align:center;
+padding:20px 8px;
+font-size:15px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>🔱 शिव भजन संग्रह</h1>
-<div class="subtitle">ॐ नमः शिवाय • हर हर महादेव</div>
-</header>
+<section class="hero">
 
-<section class="bhajan-box">
+<div class="bells">🔔</div>
+<div class="bells r">🔔</div>
 
-<a href="om-namah-shivay.html" class="card">
-  🔱 ॐ नमः शिवाय
-</a>
+<div class="trident-left">🔱</div>
+<div class="trident-right">🔱</div>
 
-<a href="हर हर महादेव" class="card">
-हर हर महादेव 
-</a>
+<div class="om">ॐ</div>
 
-<a href="#" class="card">
-<span class="icon">🔱</span> हर हर शंभू
-</a>
+<h1>शिव भजन</h1>
 
-<a href="#" class="card">
-<span class="icon">🙏</span> भोलेनाथ तेरी महिमा अपरम्पार
-</a>
+<p>भोलेनाथ की भक्ति में समर्पित</p>
 
-<a href="#" class="card">
-<span class="icon">🙏</span> मेरे भोलेनाथ
-</a>
-
-<a href="#" class="card">
-<span class="icon">🥁</span> भोले की बारात
-</a>
-
-<a href="#" class="card">
-<span class="icon">🏔️</span> शिव कैलाशों के वासी
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> शिव शंकर को जिसने पूजा
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> जय भोले भंडारी
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> बम बम भोले
-</a>
-
-<a href="#" class="card">
-<span class="icon">🥁</span> डमरू वाले बाबा
-</a>
-
-<a href="#" class="card">
-<span class="icon">🕉️</span> भोले बाबा के दरबार में
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> महादेव मेरे
-</a>
-
-<a href="#" class="card">
-<span class="icon">🏔️</span> कैलाशपति शिव शंकर
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> शंभू शंकर नमः शिवाय
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> नीलकंठ महादेव
-</a>
-
-<a href="#" class="card">
-<span class="icon">🕉️</span> भोलेनाथ की जय जयकार
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> शिव नाम से पार लगेंगे
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> शिव शंकर भोलेनाथ
-</a>
-
-<a href="#" class="card">
-<span class="icon">🎵</span> जय जय शिव शंकर
-</a>
-
-<a href="#" class="card">
-<span class="icon">🚩</span> महाकाल की सवारी
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> महाकाल तेरी भक्ति में
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> मेरे महादेव
-</a>
-
-<a href="#" class="card">
-<span class="icon">🕉️</span> शिव का नाम लो
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> भोलेनाथ के चरणों में
-</a>
-
-<a href="#" class="card">
-<span class="icon">🔱</span> त्रिपुरारी त्रिपुरारी
-</a>
-
-<a href="#" class="card">
-<span class="icon">🕉️</span> शिव ही सत्य हैं
-</a>
-
-<a href="#" class="card">
-<span class="icon">🙏</span> हे भोले शंकर
-</a>
-
- <a href="man-mera-mandir-shiv-meri-pooja.html" class="card"> 
- <span class="icon">🛕</span> मन मेरा मंदिर शिव मेरी पूजा
- </a>
-
-<a href="#" class="card">
-<span class="icon">📿</span> शिव स्तुति
-</a>
-
-<a href="#" class="card">
-<span class="icon">🕉️</span> ॐ शिवाय नमः
-</a>
+<div class="flower">🌼 🔱 🌼</div>
 
 </section>
 
+
+<main class="container">
+
+<!-- 1 -->
+<div class="bhajan">
+
+<button class="heart">♡</button>
+
+<div class="icon3d">ॐ</div>
+
+<div class="trishul-divider">
+<span class="trishul">🔱</span>
+</div>
+
+<div class="info">
+
+<div class="name">ॐ नमः शिवाय</div>
+
+<div class="sub">🎵 शिव भजन</div>
+
+<div class="player">
+
+<button class="play">▶</button>
+
+<div class="time">0:00 / 0:00</div>
+
+<input class="progress"
+type="range"
+min="0"
+max="100"
+value="0">
+
+<div class="volume-icon">🔊</div>
+
+<button class="more">⋮</button>
+
+</div>
+
+<audio preload="metadata"
+src="audio/om-namah-shivay.mp3"></audio>
+
+</div>
+
+<a href="audio/om-namah-shivay.mp3"
+download
+class="download">
+⬇️ डाउनलोड
+</a>
+
+</div>
+
+
+<!-- 2 -->
+<div class="bhajan">
+
+<button class="heart">♡</button>
+
+<div class="icon3d">🔱</div>
+
+<div class="trishul-divider">
+<span class="trishul">🔱</span>
+</div>
+
+<div class="info">
+
+<div class="name">हर हर महादेव</div>
+
+<div class="sub">🎵 महादेव भजन</div>
+
+<div class="player">
+
+<button class="play">▶</button>
+
+<div class="time">0:00 / 0:00</div>
+
+<input class="progress"
+type="range"
+min="0"
+max="100"
+value="0">
+
+<div class="volume-icon">🔊</div>
+
+<button class="more">⋮</button>
+
+</div>
+
+<audio preload="metadata"
+src="audio/har-har-mahadev.mp3"></audio>
+
+</div>
+
+<a href="audio/har-har-mahadev.mp3"
+download
+class="download">
+⬇️ डाउनलोड
+</a>
+
+</div>
+
+
+<!-- 3 -->
+<div class="bhajan">
+
+<button class="heart">♡</button>
+
+<div class="icon3d">🕉️</div>
+
+<div class="trishul-divider">
+<span class="trishul">🔱</span>
+</div>
+
+<div class="info">
+
+<div class="name">मन मेरा मंदिर शिव मेरी पूजा</div>
+
+<div class="sub">🎵 शिव भक्ति गीत</div>
+
+<div class="player">
+
+<button class="play">▶</button>
+
+<div class="time">0:00 / 0:00</div>
+
+<input class="progress"
+type="range"
+min="0"
+max="100"
+value="0">
+
+<div class="volume-icon">🔊</div>
+
+<button class="more">⋮</button>
+
+</div>
+
+<audio preload="metadata"
+src="audio/man-mera-mandir-shiv-meri-pooja.mp3"></audio>
+
+</div>
+
+<a href="audio/man-mera-mandir-shiv-meri-pooja.mp3"
+download
+class="download">
+⬇️ डाउनलोड
+</a>
+
+</div>
+
+</main>
+
+
 <footer>
-हर हर महादेव 🔱
+🔱 हर हर महादेव 🔱<br>
+ॐ नमः शिवाय
 </footer>
 
+
+<script>
+
+const cards=document.querySelectorAll(".bhajan");
+
+cards.forEach(card=>{
+
+const audio=card.querySelector("audio");
+const play=card.querySelector(".play");
+const progress=card.querySelector(".progress");
+const time=card.querySelector(".time");
+const heart=card.querySelector(".heart");
+
+function formatTime(sec){
+if(!isFinite(sec))return"0:00";
+sec=Math.floor(sec);
+let m=Math.floor(sec/60);
+let s=sec%60;
+return m+":"+(s<10?"0":"")+s;
+}
+
+audio.addEventListener("loadedmetadata",()=>{
+time.textContent=
+"0:00 / "+formatTime(audio.duration);
+});
+
+play.addEventListener("click",()=>{
+
+document.querySelectorAll("audio").forEach(other=>{
+
+if(other!==audio){
+
+other.pause();
+
+const otherPlay=
+other.closest(".bhajan")?.querySelector(".play");
+
+if(otherPlay)otherPlay.textContent="▶";
+}
+});
+
+if(audio.paused){
+audio.play();
+play.textContent="❚❚";
+}else{
+audio.pause();
+play.textContent="▶";
+}
+});
+
+audio.addEventListener("timeupdate",()=>{
+
+const percent=
+(audio.currentTime/audio.duration)*100||0;
+
+progress.value=percent;
+
+time.textContent=
+formatTime(audio.currentTime)+
+" / "+
+formatTime(audio.duration);
+});
+
+progress.addEventListener("input",()=>{
+
+if(audio.duration){
+audio.currentTime=
+(progress.value/100)*audio.duration;
+}
+});
+
+audio.addEventListener("ended",()=>{
+play.textContent="▶";
+progress.value=0;
+});
+
+heart.addEventListener("click",()=>{
+heart.classList.toggle("active");
+heart.textContent=
+heart.classList.contains("active")?"♥":"♡";
+});
+
+});
+
+</script>
+
 </body>
-</html>
+ </html>
