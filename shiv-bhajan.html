@@ -606,17 +606,9 @@ value="0">
 
 </div>
 
-<audio controls preload="metadata">
-<source src="https://raw.githubusercontent.com/abhinavshivhare027-oss/Saadhak-2/refs/heads/main/audio/aisi-subah-na-aaye.mp3" type="audio/mpeg">
-</audio>
+<audio id="audio" preload="metadata"
+src="audio/subah-subah-le-shiv-ka-naam.mp3"></audio>
 
-</div>
-
-<a href="https://raw.githubusercontent.com/abhinavshivhare027-oss/Saadhak-2/refs/heads/main/audio/aisi-subah-na-aaye.mp3"
-download
-class="download">
-⬇️ डाउनलोड
-</a>
 
 </div>
 
@@ -721,54 +713,35 @@ class="download">
  
  <!-- 5 -->
  
-<div class="bhajan">
-
-<button class="heart">♡</button>
-
-<div class="icon3d">🔱</div>
-
-<div class="trishul-divider">
-<span class="trishul">🔱</span>
-</div>
-
-<div class="info">
-
-<div class="name">शिव शंकर को जिसने पूजा</div>
-
-<div class="sub">🎵 शिव भजन</div>
-
 <div class="player">
 
- <audio id="audio" src="audio/subah-subah-le-shiv-ka-naam.mp3"></audio>
-
-<button onclick="document.getElementById('audio').play()">▶</button>
-
-<button class="play">▶</button>
+<button class="play" onclick="toggleAudio()">▶</button>
 
 <div class="time">0:00 / 0:00</div>
 
-<input class="progress"
-type="range"
-min="0"
-max="100"
-value="0">
+<input class="progress" type="range" min="0" max="100" value="0">
 
 <div class="volume-icon">🔊</div>
 
-<button class="more">⋮</button>
-
 </div>
 
-<audio preload="metadata"
- src="https://raw.githubusercontent.com/abhinavshivhare027-oss/Saadhak-2/refs/heads/main/audio/shiv-shankar-ko-jisne-pooja.mp3"></audio>
-    
-</div>
+<audio id="audio" preload="metadata"
+src="audio/subah-subah-le-shiv-ka-naam.mp3"></audio>
 
-<a href="https://raw.githubusercontent.com/abhinavshivhare027-oss/Saadhak-2/refs/heads/main/audio/shiv-shankar-ko-jisne-pooja.mp3"
-download
-class="download">
-⬇️ डाउनलोड
-</a>
+<script>
+const audio=document.getElementById("audio");
+const playBtn=document.querySelector(".play");
+
+function toggleAudio(){
+if(audio.paused){
+audio.play();
+playBtn.innerHTML="❚❚";
+}else{
+audio.pause();
+playBtn.innerHTML="▶";
+}
+}
+</script>
 
 <!-- 6 -->
 <div class="bhajan">
