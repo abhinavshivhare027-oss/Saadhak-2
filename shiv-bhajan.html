@@ -571,7 +571,7 @@ class="download">
 
 </div>
 
-<!-- 1 -->
+<!-- 2 -->
 <div class="bhajan">
 
 <button class="heart">♡</button>
@@ -621,7 +621,7 @@ class="download">
 </div>
 
  
-<!-- 2 -->
+<!-- 3 -->
 <div class="bhajan">
 
 <button class="heart">♡</button>
@@ -670,7 +670,7 @@ class="download">
 </div>
 
 
- <!-- 3 -->
+ <!-- 4 -->
 <div class="bhajan">
 
 <button class="heart">♡</button>
@@ -719,7 +719,7 @@ class="download">
 
 </div>
  
- <!-- 4 -->
+ <!-- 5 -->
 <div class="bhajan">
 
 <button class="heart">♡</button>
@@ -765,59 +765,44 @@ class="download">
 ⬇️ डाउनलोड
 </a>
 
- <!-- 5 -->
+ <!-- 6 -->
 <div class="bhajan">
 
-<button class="heart">♡</button>
+ <div class="player">
 
-<div class="icon3d">🕉️</div>
-
-<div class="trishul-divider">
-<span class="trishul">🔱</span>
-</div>
-
-<div class="info">
-
-<div class="name">मन मेरा मंदिर शिव मेरी पूजा</div>
-
-<div class="sub">🎵 शिव भक्ति गीत</div>
-
-<div class="player">
-
-<button class="play">▶</button>
+<button class="play" onclick="playAudio()">▶</button>
 
 <div class="time">0:00 / 0:00</div>
 
-<input class="progress"
-type="range"
-min="0"
-max="100"
-value="0">
+<input class="progress" type="range" min="0" max="100" value="0">
 
 <div class="volume-icon">🔊</div>
 
-<button class="more">⋮</button>
-
 </div>
 
-<audio preload="metadata"
-src="audio/subah-subah-le-shiv-ka-naam.mp3"></audio>
+<audio id="audio"
+src="audio/subah-subah-le-shiv-ka-naam.mp3"
+preload="metadata"></audio>
 
-</div>
-
-<a href="https://raw.githubusercontent.com/abhinavshivhare027-oss/Saadhak-2/refs/heads/main/audio/subah-subah-le-shiv-ka-naam.mp3"
+<a href="audio/subah-subah-le-shiv-ka-naam.mp3"
 download
 class="download">
 ⬇️ डाउनलोड
 </a>
+
+<script>
+const audio = document.getElementById("audio");
+
+function playAudio(){
+  if(audio.paused){
+    audio.play();
+  }else{
+    audio.pause();
+  }
  
-class="download">
-⬇️ डाउनलोड
-</a>
+</script>
 
-</div>
-
-<!-- 5 -->
+<!-- 7 -->
 <div class="bhajan">
 
 <button class="heart">♡</button>
