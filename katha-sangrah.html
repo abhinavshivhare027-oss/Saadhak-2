@@ -1,1 +1,352 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>कथा संग्रह</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff7a00,#ffb52e,#e94308);
+}
+
+.page{
+max-width:850px;
+margin:auto;
+min-height:100vh;
+padding:12px;
+}
+
+/* TOP */
+.hero{
+text-align:center;
+padding:35px 15px 30px;
+color:#fff;
+border-radius:28px 28px 0 0;
+background:
+radial-gradient(circle,#ffb300,#e52d05 65%,#9d1700);
+border:4px solid #ffd34e;
+box-shadow:inset 0 0 30px #ffdc5c55;
+}
+
+.om{
+font-size:60px;
+font-weight:bold;
+color:#fff;
+text-shadow:0 0 15px #ffd43b;
+}
+
+h1{
+margin:5px 0 8px;
+font-size:45px;
+color:#fff3bd;
+text-shadow:3px 4px 3px #751500;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+/* CONTENT */
+.content{
+padding:28px 20px;
+background:#fff8df;
+border:4px solid #e7a719;
+border-top:0;
+}
+
+.heading{
+text-align:center;
+font-size:27px;
+font-weight:bold;
+color:#9d2608;
+margin-bottom:25px;
+}
+
+/* CARD */
+.card{
+display:flex;
+align-items:center;
+gap:15px;
+
+padding:14px;
+margin:17px 0;
+
+text-decoration:none;
+color:#7c2605;
+
+background:
+linear-gradient(135deg,#fffdf1,#ffe28a);
+
+border:3px solid #e5a51b;
+border-radius:22px;
+
+box-shadow:
+0 6px 0 #c47a08,
+0 8px 18px #8b400025;
+
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:
+0 10px 0 #b86800,
+0 15px 25px #8b400040;
+}
+
+/* ICON */
+.icon{
+width:72px;
+height:72px;
+min-width:72px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:38px;
+
+border-radius:18px;
+
+background:
+linear-gradient(145deg,#ffb300,#e83d05);
+
+border:3px solid #ffd85a;
+
+box-shadow:
+inset 2px 2px 8px #fff6,
+4px 5px 8px #7d2c0033;
+}
+
+/* TEXT */
+.text{
+flex:1;
+}
+
+.text h2{
+margin:0 0 6px;
+font-size:24px;
+color:#972708;
+}
+
+.text p{
+margin:0;
+font-size:14px;
+color:#70462b;
+}
+
+/* ARROW */
+.arrow{
+width:48px;
+height:48px;
+min-width:48px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:
+linear-gradient(145deg,#ffb300,#ed4b08);
+
+border:3px solid #ffe16a;
+
+color:white;
+font-size:32px;
+
+box-shadow:
+3px 4px 0 #b85c00;
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:25px 10px;
+
+background:
+linear-gradient(135deg,#a51e00,#ed7200);
+
+color:#ffe9a0;
+font-size:14px;
+
+border:4px solid #e7a719;
+border-top:0;
+border-radius:0 0 28px 28px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+.page{
+padding:7px;
+}
+
+.hero{
+padding:28px 10px 25px;
+}
+
+.om{
+font-size:48px;
+}
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:13px;
+}
+
+.content{
+padding:22px 12px;
+}
+
+.heading{
+font-size:23px;
+}
+
+.card{
+padding:11px;
+gap:11px;
+}
+
+.icon{
+width:58px;
+height:58px;
+min-width:58px;
+font-size:30px;
+}
+
+.text h2{
+font-size:18px;
+}
+
+.text p{
+font-size:11px;
+}
+
+.arrow{
+width:40px;
+height:40px;
+min-width:40px;
+font-size:26px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- HEADER -->
+<div class="hero">
+
+<div class="om">ॐ</div>
+
+<h1>कथा संग्रह</h1>
+
+<div class="subtitle">
+पौराणिक कथाओं का दिव्य संसार
+</div>
+
+</div>
+
+
+<!-- STORIES -->
+<div class="content">
+
+<div class="heading">
+॥ पौराणिक कथाएँ ॥
+</div>
+
+
+<a href="vishnu-kathayen.html" class="card">
+
+<div class="icon">🪷</div>
+
+<div class="text">
+<h2>विष्णु कथाएँ</h2>
+<p>भगवान विष्णु से जुड़ी पौराणिक कथाएँ</p>
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a href="shiv-kathayen.html" class="card">
+
+<div class="icon">🔱</div>
+
+<div class="text">
+<h2>शिव कथाएँ</h2>
+<p>भगवान शिव की पवित्र एवं दिव्य कथाएँ</p>
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a href="navgrah-kathayen.html" class="card">
+
+<div class="icon">☀️</div>
+
+<div class="text">
+<h2>नव ग्रह कथाएँ</h2>
+<p>नव ग्रहों से संबंधित धार्मिक कथाएँ</p>
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a href="ganesh-kathayen.html" class="card">
+
+<div class="icon">🐘</div>
+
+<div class="text">
+<h2>गणेश जी की कथाएँ</h2>
+<p>श्री गणेश जी की पावन कथाएँ</p>
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a href="hanuman-kathayen.html" class="card">
+
+<div class="icon">🚩</div>
+
+<div class="text">
+<h2>हनुमान जी की कथाएँ</h2>
+<p>श्री हनुमान जी की भक्ति और वीरता की कथाएँ</p>
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+</div>
+
+
+<div class="footer">
+ॐ नमः शिवाय &nbsp; • &nbsp; जय श्री राम &nbsp; • &nbsp; जय श्री हनुमान
+</div>
+
+</div>
+
+</body>
+</html>
+
